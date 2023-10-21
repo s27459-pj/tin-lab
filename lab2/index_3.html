@@ -9,27 +9,26 @@
 
   <body>
     <div class="wrapper">
-      <nav id="header">
-        <div class="nav-section">
-          <div class="dropdown-label">Section 1</div>
-          <div class="dropdown-content">
-            <a href="#1.0">Section 1</a>
-            <a href="#1.1">Subsection 1</a>
-            <a href="#1.2">Subsection 2</a>
-          </div>
-        </div>
-
-        <div class="nav-section">
-          <div class="dropdown-label">Section 2</div>
-          <div class="dropdown-content">
-            <a href="#2.0">Section 2</a>
-            <a href="#2.1">Introduce yourself</a>
-          </div>
-        </div>
+      <nav>
+        <ul>
+          <li class="nav-section">
+            <a class="nav-label" href="#1.0">Section 1</a>
+            <ul class="nav-dropdown">
+              <li><a href="#1.1">Subsection 1</a></li>
+              <li><a href="#1.2">Subsection 2</a></li>
+            </ul>
+          </li>
+          <li class="nav-section">
+            <a class="nav-label" href="#2.0">Section 2</a>
+            <ul class="nav-dropdown">
+              <li><a href="#2.1">Introduce yourself</a></li>
+            </ul>
+          </li>
+        </ul>
       </nav>
 
-      <main id="content">
-        <div class="column">
+      <main>
+        <div class="content-column">
           <h1 id="1.0">Section 1</h1>
           <p>
             Lorem ipsum dolor, sit amet consectetur adipisicing elit. Aliquam,
@@ -55,7 +54,7 @@
           />
         </div>
 
-        <div class="column">
+        <div class="content-column">
           <h2 id="1.2">Subsection 2</h2>
           <p>
             Lorem ipsum dolor sit amet consectetur adipisicing elit. Non,
@@ -180,7 +179,7 @@
         </div>
       </main>
 
-      <footer id="footer">
+      <footer>
         <p>sample text 1</p>
         <p>sample text 2</p>
         <p>sample text 3</p>

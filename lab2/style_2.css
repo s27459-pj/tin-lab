@@ -29,7 +29,7 @@ body > .wrapper {
   grid-template-columns: auto minmax(0, 1fr);
 }
 
-#sidebar {
+nav {
   grid-column: 1 / 2;
   background-color: var(--background-transparent);
   padding-right: 0.5em;
@@ -58,7 +58,7 @@ body > .wrapper {
   }
 }
 
-#content {
+main {
   grid-column: 2 / 2;
   background-color: var(--background);
 
@@ -67,7 +67,7 @@ body > .wrapper {
   scroll-behavior: smooth;
 }
 
-#footer {
+footer {
   grid-column: 1 / -1;
   background-color: var(--background);
 
