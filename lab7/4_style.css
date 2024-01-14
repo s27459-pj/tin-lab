@@ -1,0 +1,227 @@
+/* #region General */
+:root {
+  --text: #f6e9f1;
+  --background: #12070e;
+  --background-transparent: #12070e94;
+  --primary: #abdec0;
+  --secondary: #142633;
+  --secondary-2: #263846;
+  --accent: #57bc81;
+}
+
+body {
+  font-family: Arial, Helvetica, sans-serif;
+  font-size: 18px;
+  color: var(--text);
+  background-color: var(--background);
+  background-image: url("https://images.unsplash.com/photo-1549119246-cf57ef8a17b2?ixlib=rb-4.0.3&ixid=M3wxMjA3fDB8MHxwaG90by1wYWdlfHx8fGVufDB8fHx8fA%3D%3D&auto=format&fit=crop&w=2070&q=60");
+}
+
+a {
+  display: block;
+  color: var(--accent);
+  text-decoration: none;
+}
+
+body > .wrapper {
+  display: flex;
+  flex-direction: column;
+}
+/* #endregion General */
+
+/* #region Nav */
+nav ul {
+  display: flex;
+  flex-direction: row;
+  padding: 0;
+  margin: 0;
+}
+
+nav li {
+  list-style-type: none;
+}
+
+nav .nav-label {
+  padding: 0.5em;
+  background-color: var(--secondary);
+  transition: filter 0.2s;
+}
+
+nav .nav-dropdown {
+  display: none;
+  position: absolute;
+  z-index: 1;
+
+  background-color: var(--secondary);
+}
+
+nav .nav-dropdown a {
+  background-color: var(--secondary);
+  padding: 0.75em;
+  transition: filter 0.2s;
+}
+
+nav .nav-dropdown .nav-label:hover {
+  filter: brightness(1.3);
+}
+
+nav .nav-dropdown ul {
+  display: flex;
+  flex-direction: row;
+}
+
+nav .nav-section:hover > .nav-label {
+  filter: brightness(1.3);
+}
+nav:not(.active) .nav-section:hover .nav-dropdown {
+  display: flex;
+  flex-direction: column;
+}
+
+@media screen and (max-width: 1000px) {
+  nav {
+    /* By defualt hidden, but will be shown when hamburger is toggled */
+    display: none;
+  }
+  nav.active {
+    /* Switch the navbar to visible only if the `active` class was added */
+    display: flex;
+    margin-top: 0.5em;
+  }
+  nav.active ul,
+  nav.active ul.nav-dropdown {
+    flex-direction: column;
+    width: 100%;
+  }
+  nav.active .nav-label {
+    padding: 0.75em;
+  }
+  nav.active ul.nav-dropdown {
+    display: flex;
+    position: initial;
+    z-index: initial;
+  }
+  nav.active ul.nav-dropdown .nav-label {
+    padding-left: 1.5em;
+  }
+}
+/* #endregion Nav */
+
+/* #region Header */
+header {
+  margin-bottom: 0.5em;
+}
+
+#hamburger-toggle {
+  display: none; /* is set to flex on mobile */
+  background-color: transparent;
+  border: none;
+  height: 3em;
+  cursor: pointer;
+}
+#hamburger-toggle .hamburger-bars {
+  display: flex;
+  flex-direction: column;
+  justify-content: space-evenly;
+}
+#hamburger-toggle .hamburger-bar {
+  width: 35px;
+  height: 6px;
+  border-radius: 5px;
+  background-color: var(--accent);
+}
+
+@media screen and (max-width: 1000px) {
+  #hamburger-toggle {
+    display: flex;
+  }
+}
+/* #endregion Header */
+
+/* #region Content */
+main {
+  display: flex;
+  flex-direction: row;
+  gap: 1em;
+
+  overflow: scroll;
+  max-height: 50rem;
+  scroll-behavior: smooth;
+
+  background-color: var(--background);
+}
+
+main .content-column {
+  width: 50%;
+}
+
+main img {
+  width: 100%;
+}
+
+footer {
+  display: flex;
+  flex-direction: row;
+  justify-content: space-around;
+
+  background-color: var(--background);
+  text-align: center;
+}
+
+@media screen and (max-width: 1000px) {
+  main {
+    flex-direction: column;
+    gap: 1em;
+  }
+
+  main .content-column {
+    width: 100%;
+  }
+}
+
+form {
+  display: flex;
+  flex-direction: row;
+  gap: 2em;
+}
+
+form fieldset {
+  width: fit-content;
+}
+form .input-element {
+  margin: 1em 0;
+}
+form .input-element > input {
+  width: 100%;
+}
+form .input-element > label {
+  display: block;
+}
+form .form-buttons {
+  margin: 1em 0;
+}
+
+table {
+  width: 100%;
+  border-collapse: collapse;
+}
+
+table thead tr th {
+  padding: 0.5em;
+  background-color: var(--accent);
+}
+
+table td {
+  border: 1px solid black;
+  padding: 0.5em;
+  text-align: center;
+  border-bottom: 2px dashed red;
+}
+
+table tbody tr:nth-child(even) {
+  background-color: var(--secondary);
+}
+table tbody tr:nth-child(odd) {
+  background-color: var(--secondary-2);
+}
+/* #endregion Content */

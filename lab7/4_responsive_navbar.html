@@ -1,0 +1,200 @@
+<!DOCTYPE html>
+<html lang="pl">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <link rel="stylesheet" href="4_style.css" />
+    <script src="4_script.js" defer></script>
+    <title>TIN - Lab 1</title>
+  </head>
+
+  <body>
+    <div class="wrapper">
+      <header>
+        <button id="hamburger-toggle">
+          <div class="hamburger-bars">
+            <div class="hamburger-bar"></div>
+            <div class="hamburger-bar"></div>
+            <div class="hamburger-bar"></div>
+          </div>
+        </button>
+        <!-- TODO: Toggle `active` class by hamburger click -->
+        <nav>
+          <ul>
+            <li class="nav-section">
+              <a class="nav-label" href="#1.0">Section 1</a>
+              <ul class="nav-dropdown">
+                <li><a class="nav-label" href="#1.1">Subsection 1</a></li>
+                <li><a class="nav-label" href="#1.2">Subsection 2</a></li>
+              </ul>
+            </li>
+            <li class="nav-section">
+              <a class="nav-label" href="#2.0">Section 2</a>
+              <ul class="nav-dropdown">
+                <li><a class="nav-label" href="#2.1">Introduce yourself</a></li>
+              </ul>
+            </li>
+          </ul>
+        </nav>
+      </header>
+
+      <main>
+        <div class="content-column">
+          <h1 id="1.0">Section 1</h1>
+          <p>
+            Lorem ipsum dolor, sit amet consectetur adipisicing elit. Aliquam,
+            aperiam blanditiis nobis ratione rem beatae quisquam illum
+            recusandae reprehenderit temporibus obcaecati dolores, dolorum
+            excepturi eaque ea necessitatibus, fugit optio laudantium?
+            Voluptatum adipisci laboriosam autem dolor saepe est vero. Porro,
+            quis consequuntur! Ipsum saepe suscipit, quia libero quis eius
+            voluptatem eligendi. Tempora voluptate est commodi deserunt
+            quibusdam accusantium qui doloremque tenetur.
+          </p>
+
+          <h2 id="1.1">Subsection 1</h2>
+          <p>
+            Lorem ipsum dolor sit amet, consectetur adipisicing elit. Cum
+            maiores at iste velit iure laborum aliquam ratione? Sint iusto
+            maxime maiores eos nulla nihil, aspernatur libero. Dolores
+            consequuntur vel ipsa?
+          </p>
+          <img
+            src="https://images.unsplash.com/photo-1542395975-d6d3ddf91d6e?fit=crop&w=500&q=50"
+            alt="Photo of a valley at sunrise"
+          />
+        </div>
+
+        <div class="content-column">
+          <h2 id="1.2">Subsection 2</h2>
+          <p>
+            Lorem ipsum dolor sit amet consectetur adipisicing elit. Non,
+            repellendus deleniti tempore rerum, odio mollitia eaque ab doloribus
+            reprehenderit perspiciatis molestiae voluptate, delectus temporibus
+            consequatur ut ducimus nobis neque dolore.
+          </p>
+          <table>
+            <thead>
+              <tr>
+                <th>Col 1</th>
+                <th>Col 2</th>
+                <th>Col 3</th>
+              </tr>
+            </thead>
+            <tr>
+              <td>1</td>
+              <td>2</td>
+              <td>3</td>
+            </tr>
+            <tr>
+              <td>a</td>
+              <td>b</td>
+              <td>c</td>
+            </tr>
+            <tr>
+              <td>x</td>
+              <td>y</td>
+              <td>z</td>
+            </tr>
+            <tr>
+              <td>p</td>
+              <td>q</td>
+              <td>r</td>
+            </tr>
+          </table>
+
+          <h1 id="2.0">Section 2</h1>
+          <p>
+            Lorem ipsum dolor sit amet consectetur adipisicing elit. Quod,
+            maxime! Sunt neque quis nihil a. A architecto corrupti laboriosam,
+            repellendus aspernatur vel voluptatum ipsa veniam, ipsam magni
+            fugit. Id, quo!
+          </p>
+
+          <h2 id="2.1">Introduce yourself</h2>
+          <form method="post" action="index.html" id="introduction">
+            <div class="form-column">
+              <div class="input-element">
+                <label for="introduction:name"> Name and surname </label>
+                <input type="text" name="name" id="introduction:name" />
+              </div>
+
+              <div class="input-element">
+                <label for="introduction:description"> description </label>
+                <textarea
+                  name="description"
+                  id="introduction:description"
+                  cols="40"
+                  rows="5"
+                  placeholder="Say something about yourself"
+                >
+                </textarea>
+              </div>
+            </div>
+
+            <div class="form-column">
+              <div class="input-element">
+                <label for="introduction:age"> Age </label>
+                <select name="age" id="introduction:age">
+                  <option value="18">18</option>
+                  <option value="19">19</option>
+                  <option value="20" selected>20</option>
+                  <option value="21">21</option>
+                  <option value="22">22</option>
+                  <option value="23">23</option>
+                  <option value="24">24</option>
+                  <option value="25">25</option>
+                  <option value="26">26</option>
+                  <option value="27">27</option>
+                  <option value="28">28</option>
+                  <option value="29">29</option>
+                  <option value="30">30</option>
+                </select>
+              </div>
+
+              <fieldset>
+                <legend>Gender</legend>
+
+                <div>
+                  <input
+                    type="radio"
+                    name="gender"
+                    id="introduction:gender:female"
+                  />
+                  <label for="introduction:gender:female">Female</label>
+                </div>
+                <div>
+                  <input
+                    type="radio"
+                    name="gender"
+                    id="introduction:gender:male"
+                  />
+                  <label for="introduction:gender:male">Male</label>
+                </div>
+                <div>
+                  <input
+                    type="radio"
+                    name="gender"
+                    id="introduction:gender:other"
+                  />
+                  <label for="introduction:gender:other">Other</label>
+                </div>
+              </fieldset>
+
+              <div class="form-buttons">
+                <input type="submit" value="Submit" />
+                <input type="reset" value="Clear" />
+              </div>
+            </div>
+          </form>
+        </div>
+      </main>
+
+      <footer>
+        <p>sample text 1</p>
+        <p>sample text 2</p>
+        <p>sample text 3</p>
+      </footer>
+    </div>
+  </body>
+</html>
