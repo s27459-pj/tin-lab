@@ -23,7 +23,8 @@ body {
 }
 
 main {
-  width: 50%;
+  max-width: 800px;
+  margin: auto 1rem;
   margin-top: 2rem;
 }
 /* #endregion General */
